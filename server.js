@@ -7,13 +7,21 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'yuseffufu1997',
-  database: 'delta_timesheet'
-});
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'yuseffufu1997',
+//   database: 'delta_timesheet'
+// });
 
+// const db = mysql.createConnection({
+//   host: '192.9.135.20',
+//   user: 'root',
+//   password: 'Sampoo200*Right',
+//   database: 'timesheetdb'
+// });
+
+const db = mysql.createConnection('mysql://ozd0bkovhavllssk:mxpu3u1nc2383rdk@nnsgluut5mye50or.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ilfj45dihmmqskou');
 db.connect((err) => {
   if (err) {
     console.error('Error connecting to MySQL database:', err);
