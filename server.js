@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const port = 5001;
+const PORT = 5001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -53,9 +53,9 @@ app.post('/submit', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 
 //test
 //anothertester
