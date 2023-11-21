@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const port = 3000;
+const port = 5001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
