@@ -1,8 +1,8 @@
 const express = require('express');
 const mysql = require('mysql');
-
+require('dotenv').config();
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT ||  3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -53,9 +53,9 @@ app.post('/submit', (req, res) => {
   });
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 //test
 //anothertester
